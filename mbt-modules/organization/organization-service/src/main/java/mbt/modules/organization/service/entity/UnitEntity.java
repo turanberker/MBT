@@ -1,8 +1,7 @@
 package mbt.modules.organization.service.entity;
 
-import com.fasterxml.jackson.databind.ser.Serializers;
-import com.sun.istack.NotNull;
-import mbt.core.entity.BaseEntity;
+
+import mbt.core.service.entity.BaseEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

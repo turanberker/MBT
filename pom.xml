@@ -17,7 +17,7 @@
     <modules>
         <module>mbt-modules</module>
         <module>mbt-core</module>
-        <module>mbt-common</module>
+
     </modules>
 
     <properties>

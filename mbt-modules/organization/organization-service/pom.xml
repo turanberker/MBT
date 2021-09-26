@@ -24,8 +24,8 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>mbt.main</groupId>
-            <artifactId>mbt-core</artifactId>
+            <groupId>mbt.core</groupId>
+            <artifactId>mbt-service</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 

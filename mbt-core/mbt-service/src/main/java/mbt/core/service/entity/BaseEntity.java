@@ -1,4 +1,4 @@
-package mbt.core.entity;
+package mbt.core.service.entity;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
