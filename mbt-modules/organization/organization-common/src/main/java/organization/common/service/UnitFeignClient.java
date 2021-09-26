@@ -1,6 +1,8 @@
 package organization.common.service;
 
-public interface UnitFeignClient {
+import org.springframework.cloud.openfeign.FeignClient;
 
+@FeignClient(path = "/unit")
+public interface UnitFeignClient {
 
 }
