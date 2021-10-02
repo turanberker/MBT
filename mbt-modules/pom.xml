@@ -9,6 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
+    <version>1.0.0</version>
     <groupId>mbt.modules</groupId>
     <artifactId>mbt-modules</artifactId>
     <packaging>pom</packaging>
