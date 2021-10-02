@@ -19,8 +19,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>mbt.main</groupId>
+            <groupId>mbt.core</groupId>
             <artifactId>mbt-common</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 
