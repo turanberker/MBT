@@ -10,6 +10,7 @@
         <module name="organization-service" />
         <module name="personel-service" />
         <module name="mbt-elastic-service" />
+        <module name="organization-common" />
         <module name="mbt-common" />
         <module name="personel-common" />
         <module name="mbt-service" />
@@ -25,6 +26,7 @@
       <module name="mbt-elastic-service" options="-parameters" />
       <module name="mbt-helper" options="-parameters" />
       <module name="mbt-service" options="-parameters" />
+      <module name="organization-common" options="-parameters" />
       <module name="organization-service" options="-parameters" />
       <module name="personel-common" options="-parameters" />
       <module name="personel-service" options="-parameters" />
