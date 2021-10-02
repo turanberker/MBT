@@ -21,7 +21,6 @@
         <dependency>
             <groupId>mbt.main</groupId>
             <artifactId>mbt-common</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
