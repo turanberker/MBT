@@ -13,7 +13,7 @@
     <groupId>mbt.main</groupId>
     <artifactId>MBT</artifactId>
     <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <modules>
         <module>mbt-modules</module>
         <module>mbt-core</module>

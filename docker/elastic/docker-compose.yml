@@ -21,6 +21,8 @@ services:
       - elasticsearch
     ports:
       - 5601:5601
+  mbtElastic:
+    image:
 networks:
   es-net:
     driver: bridge
