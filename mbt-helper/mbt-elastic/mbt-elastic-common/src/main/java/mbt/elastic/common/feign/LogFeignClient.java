@@ -19,4 +19,7 @@ public interface LogFeignClient {
 
     @GetMapping(path = "/findAll/{logType}/{pageNumber}")
     ResponseEntity<MbtPage<LogModel>> find(@PathVariable("logType") String logType, @PathVariable("pageNumber") Integer pageNumber);
+
+    /*@GetMapping(path = "/test")
+    String test();*/
 }

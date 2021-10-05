@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
-ARG JAR_FILE=D:/work/workspaces/MBT/mbt-helper/mbt-elastic/mbt-elastic-service/target/*.jar
-COPY ${JAR_FILE} mbt-service.jar
-ENTRYPOINT ["java","-jar","/mbt-service.jar"]
+FROM openjdk:11
+COPY D:/work/workspaces/mbt/mbt-helper/mbt-elastic/mbt-elastic-service/target/mbt-elastic-service-1.0.0.jar  mbt-elastic.jar
+EXPOSE 8100
+ENTRYPOINT ["java","-jar","/mbt-elastic.jar"]

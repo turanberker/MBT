@@ -18,11 +18,12 @@ import java.util.Date;
 
 
 @Service
-public class LogService {
+public class LogService implements ILogService {
 
     @Autowired
-    private  LogRepository repository;
+    private LogRepository repository;
 
+    @Override
     public LogModel save(LogPersistModel model) {
         LogDocument logDocument = MbtConverter.convertValue(model, LogDocument.class);
         logDocument.setDate(new Date());
@@ -32,6 +33,7 @@ public class LogService {
 
     }
 
+    @Override
     public MbtPage<LogModel> findByPage(String logType, int page) {
 
         Pageable pageable = PageRequest.of(page, 10, Sort.unsorted());
