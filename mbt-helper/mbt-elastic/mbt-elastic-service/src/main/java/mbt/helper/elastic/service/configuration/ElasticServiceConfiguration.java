@@ -30,7 +30,7 @@ public class ElasticServiceConfiguration {
                 = ClientConfiguration.builder()
                 .connectedTo(kibanaUrl.concat(":").concat(kibanaPort))
                 .build();
-        System.out.println(kibanaUrl.concat(":").concat(kibanaPort));
+
         return RestClients.create(clientConfiguration).rest();
     }
 
