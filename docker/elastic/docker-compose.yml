@@ -23,7 +23,8 @@ services:
       - 5601:5601
   mbt-elastic-server:
     container_name: mbt-elastic-server
-    image: mbt-elastic:latest
+    #image: mbt-elastic:latest
+    build: .
     environment:
       - KIBANA_URL=es-container
       - KIBANA_PORT=9200
