@@ -3,6 +3,7 @@ package mbt.common.util;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -25,5 +26,9 @@ public class MbtConverter {
 
     public static <T> T convertValue(Object object, Class<T> klass) {
         return mapper.convertValue(object, klass);
+    }
+
+    public static  <T> T convertValue(Object fromValue, TypeReference<T> toValueTypeRef) throws IllegalArgumentException {
+        return mapper.convertValue(fromValue, toValueTypeRef);
     }
 }
