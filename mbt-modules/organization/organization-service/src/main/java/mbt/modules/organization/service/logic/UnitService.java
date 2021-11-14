@@ -19,7 +19,6 @@ public class UnitService implements IUnitService {
 
     private final UnitRepository unitRepository;
 
-
     private EntityManager em;
 
     public UnitService(EntityManager em, UnitRepository unitRepository) {

@@ -8,14 +8,19 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mbt-elastic-common" />
         <module name="organization-service" />
-        <module name="personel-service" />
         <module name="mbt-elastic-service" />
+        <module name="personel-service" />
         <module name="organization-common" />
         <module name="mbt-common" />
         <module name="personel-common" />
         <module name="mbt-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="transaction" target="1.8" />
+      <module name="transaction-common" target="1.8" />
+      <module name="transaction-service" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -30,6 +35,8 @@
       <module name="organization-service" options="-parameters" />
       <module name="personel-common" options="-parameters" />
       <module name="personel-service" options="-parameters" />
+      <module name="transaction-common" options="-parameters" />
+      <module name="transaction-service" options="-parameters" />
     </option>
   </component>
 </project>
