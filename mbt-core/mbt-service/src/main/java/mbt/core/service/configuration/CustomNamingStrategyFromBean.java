@@ -15,7 +15,7 @@ import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MySpringPhysicalNamingStrateg extends PhysicalNamingStrategyStandardImpl
+public class CustomNamingStrategyFromBean extends PhysicalNamingStrategyStandardImpl
         implements ApplicationContextAware {
 
     private final StandardEvaluationContext context = new StandardEvaluationContext();
@@ -47,7 +47,7 @@ public class MySpringPhysicalNamingStrateg extends PhysicalNamingStrategyStandar
     public Identifier toPhysicalSchemaName(Identifier name, JdbcEnvironment jdbcEnvironment) {
         if (name != null && name.getText().contains(ParserContext.TEMPLATE_EXPRESSION.getExpressionPrefix())) {
             String nameStr = name.getText();
-            // Refer to SimpleElasticSearchPersistenTentent Realism, get the value of the TABLENAME parameters to get the expression
+            // Refer to SimpleElasticSearchPersistenTentent Realism, get the value of the SCHEMANAME parameters to get the expression
             Expression expression = this.parser.parseExpression(nameStr, ParserContext.TEMPLATE_EXPRESSION);
             return Identifier.toIdentifier((String) expression.getValue(this.context, String.class));
         } else {
