@@ -16,13 +16,12 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EntityScan(basePackageClasses = {StatusEntity.class, PersonelEntity.class})
 @ComponentScan(basePackageClasses = {
         CustomNamingStrategyFromBean.class,
-        StatusService.class,
-        StatusRepository.class})
+        StatusService.class})
 @EnableJpaRepositories(basePackageClasses = {StatusRepository.class})
 public class PersonelConfiguration {
 
     @Bean(name = "statusEntityNamingBean")
-    public StatusEntityNamingBean getStatusEntityNamingBean(){
+    public StatusEntityNamingBean getStatusEntityNamingBean() {
         return new StatusEntityNamingBean("PBS", "STATUS");
     }
 }
