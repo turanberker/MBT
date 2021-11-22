@@ -2,6 +2,7 @@ package mbt.modules.organization.service.entity;
 
 
 import mbt.core.service.entity.BaseEntity;
+import mbt.core.service.entity.StatusEntity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -17,6 +18,10 @@ public class UnitEntity extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "UNIT_GROUP_ID", foreignKey = @ForeignKey(name = "FK_UNIT_GROUP0"))
     private UnitGrupEntity group;
+
+    @ManyToOne
+    @JoinColumn(name = "STATUS_ID", foreignKey = @ForeignKey(name = "FK_UNIT_STATUS0"))
+    private StatusEntity status;
 
     @ManyToOne
     @JoinColumn(name = "PARENT_UNIT_ID", foreignKey = @ForeignKey(name = "FK_UNIT_UNIT0"))
@@ -44,5 +49,13 @@ public class UnitEntity extends BaseEntity {
 
     public void setGroup(UnitGrupEntity group) {
         this.group = group;
+    }
+
+    public StatusEntity getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusEntity status) {
+        this.status = status;
     }
 }

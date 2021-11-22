@@ -10,6 +10,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/mbt-elastic-service/pom.xml" />
+        <option value="$PROJECT_DIR$/mbt-modules/gayrimenkul/pom.xml" />
       </set>
     </option>
   </component>

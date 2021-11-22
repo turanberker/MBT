@@ -17,6 +17,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="gayrimenkul" target="11" />
+      <module name="gayrimenkul-common" target="11" />
+      <module name="gayrimenkul-service" target="11" />
       <module name="transaction" target="1.8" />
       <module name="transaction-common" target="1.8" />
       <module name="transaction-service" target="1.8" />
