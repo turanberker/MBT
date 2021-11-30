@@ -1,5 +1,6 @@
 package mbt.modules.organization.service.configuration;
 
+import mbt.common.validation.ValidateAspect;
 import mbt.core.service.entity.StatusEntity;
 import mbt.core.service.logic.StatusService;
 import mbt.core.service.repository.StatusRepository;
@@ -15,7 +16,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @Configuration
 @EntityScan(basePackageClasses = {StatusEntity.class, UnitEntity.class})
 @ComponentScan(basePackageClasses = {UnitRestController.class,
-        UnitService.class,
+        UnitService.class, ValidateAspect.class,
         StatusService.class})
 @EnableJpaRepositories(basePackageClasses = {StatusRepository.class, UnitRepository.class})
 public class OrganizationConfiguration {

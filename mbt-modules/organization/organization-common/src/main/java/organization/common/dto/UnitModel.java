@@ -1,10 +1,11 @@
 package organization.common.dto;
 
 import mbt.common.dto.BaseModel;
+import mbt.common.validation.MbtValidator;
 
 import javax.validation.constraints.NotBlank;
 
-public class UnitModel extends BaseModel {
+public class UnitModel extends BaseModel implements MbtValidator {
 
     @NotBlank
     private String name;
@@ -17,4 +18,10 @@ public class UnitModel extends BaseModel {
         this.name = name;
     }
 
+    @Override
+    public void validate() throws Exception {
+        if (name.equalsIgnoreCase("test")) {
+            throw new Exception("test adı olamaz");
+        }
+    }
 }

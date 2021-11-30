@@ -1,5 +1,6 @@
 package mbt.modules.organization.service.controller;
 
+import mbt.common.validation.MbtValidate;
 import mbt.modules.organization.service.logic.UnitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,6 +20,7 @@ public class UnitRestController implements UnitFeignClient {
     @Autowired
     private UnitService unitService;
 
+    @MbtValidate
     @PostMapping(path = "/save",consumes = MediaType.APPLICATION_JSON_VALUE,produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<UnitModel>save (@RequestBody @Valid UnitModel unitModel){
         UnitModel save = unitService.save(unitModel);
