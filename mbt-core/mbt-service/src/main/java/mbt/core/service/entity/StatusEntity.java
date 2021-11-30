@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 
 @Entity
-@Table(schema = "#{statusEntityNamingBean.schemaName}", name = "#{statusEntityNamingBean.tableName}")
+@Table(name = "STATUS")
 public class StatusEntity extends BaseEntity {
 
     @Column(name = "STATUS_NAME")
