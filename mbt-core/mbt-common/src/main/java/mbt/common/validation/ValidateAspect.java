@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class ValidateAspect {
-//Çalışıyor
+
     @Pointcut("@within(org.springframework.web.bind.annotation.RestController)")
     public void restControllerPointcut() {
     }
