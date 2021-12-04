@@ -1,0 +1,13 @@
+version: "3.0"
+services:
+  mbt-organization-server:
+    container_name: mbt-organization-server
+    #image: mbt-elastic:latest
+    build: .
+    networks:
+      - es-net
+    ports:
+      - 8000:8000
+networks:
+  es-net:
+    driver: bridge
