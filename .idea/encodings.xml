@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/mbt-core/mbt-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mbt-core/mbt-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mbt-core/mbt-kafka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mbt-core/mbt-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mbt-core/mbt-service/target/generated-sources/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mbt-helper/mbt-elastic/mbt-elastic-common/src/main/java" charset="UTF-8" />
@@ -11,6 +12,7 @@
     <file url="file://$PROJECT_DIR$/mbt-helper/mbt-elastic/mbt-elastic-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mbt-modules/organization/organization-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mbt-modules/organization/organization-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mbt-modules/organization/organization-kafka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mbt-modules/organization/organization-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mbt-modules/organization/organization-service/src/main/java/mbt/modules/organization" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mbt-modules/organization/organization-service/src/main/java/mbt/modules/organization/service" charset="UTF-8" />

@@ -1,16 +1,15 @@
 package mbt.modules.organization.service.logic;
 
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.querydsl.jpa.impl.JPAQueryFactory;
 import mbt.common.util.MbtConverter;
 import mbt.modules.organization.service.entity.QUnitEntity;
 import mbt.modules.organization.service.entity.UnitEntity;
+import mbt.modules.organization.service.producer.UnitProducer;
 import mbt.modules.organization.service.repository.UnitRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import organization.common.dto.UnitModel;
+import organization.kafka.event.UnitCreatedEvent;
 
-import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import java.util.List;
 
@@ -19,11 +18,14 @@ public class UnitService implements IUnitService {
 
     private final UnitRepository unitRepository;
 
+    private final UnitProducer unitProducer;
+
     private EntityManager em;
 
-    public UnitService(EntityManager em, UnitRepository unitRepository) {
-        this.em = em;
+    public UnitService(UnitRepository unitRepository, UnitProducer unitProducer, EntityManager em) {
         this.unitRepository = unitRepository;
+        this.unitProducer = unitProducer;
+        this.em = em;
     }
 
     @Override
@@ -32,6 +34,8 @@ public class UnitService implements IUnitService {
         UnitEntity unit = MbtConverter.convertValue(unitModel, UnitEntity.class);
         unit.setName(unitModel.getName());
         unitRepository.save(unit);
+        UnitCreatedEvent unitCreatedEvent = new UnitCreatedEvent(unit.getId(), unit.getName());
+        unitProducer.sendMessage(unitCreatedEvent);
         unitModel.setId(unit.getId());
         return unitModel;
     }

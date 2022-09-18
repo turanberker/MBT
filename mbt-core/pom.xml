@@ -15,6 +15,7 @@
     <modules>
         <module>mbt-service</module>
         <module>mbt-common</module>
+        <module>mbt-kafka</module>
     </modules>
 
     <properties>

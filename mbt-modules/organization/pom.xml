@@ -16,6 +16,7 @@
     <modules>
         <module>organization-common</module>
         <module>organization-service</module>
+        <module>organization-kafka</module>
     </modules>
 
     <properties>

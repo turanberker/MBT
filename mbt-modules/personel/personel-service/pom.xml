@@ -24,6 +24,11 @@
             <version>1.0.0</version>
         </dependency>
         <dependency>
+            <groupId>mbt.modules.organization</groupId>
+            <artifactId>organization-kafka</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
             <groupId>mbt.core</groupId>
             <artifactId>mbt-service</artifactId>
             <version>1.0.0</version>
