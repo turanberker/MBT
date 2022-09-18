@@ -15,9 +15,15 @@
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <modules>
+        <module>mbt-core/mbt-common</module>
+        <module>mbt-core/mbt-service</module>
+        <module>mbt-core/mbt-kafka</module>
+        <module>mbt-helper/mbt-elastic</module>
+
+
         <module>mbt-modules</module>
-        <module>mbt-core</module>
-        <module>mbt-helper</module>
+
+
 
     </modules>
 
